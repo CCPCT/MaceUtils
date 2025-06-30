@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "maceutils",
+  "version": "${version}",
+  "name": "MaceUtils",
+  "description": "Optimise mace experience",
+  "authors": [
+    "CCPCT"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/maceutils",
+    "repo": "https://github.com/CCPCT/MaceUtils",
+    "issues": "https://github.com/CCPCT/maceutils/issues",
+    "website": "https://github.com/CCPCT"
+  },
+  "license": "GPL-3.0-or-later",
+  "icon": "assets/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "io.github.CCPCT.maceutils.MaceUtils.util.Packets"
+    ],
+    "modmenu": [
+      "io.github.CCPCT.maceutils.MaceUtils.ModMenu.ModMenu"
+    ]
+  },
+
+  "mixins": [
+    "maceutils.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}",
+    "java": ">=21",
+    "modmenu": "*",
+    "cloth-config": "*"
+  }
+}
